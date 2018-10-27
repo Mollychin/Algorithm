@@ -16,9 +16,9 @@ public class ToeplitzMatrixTest {
     /**
      * 判断是否是托普利兹矩阵
      */
-    private static boolean isToeplitzMatrixA(int[][] nums) {
-        int column = nums.length;
-        int row = nums[0].length;
+    private static boolean isToeplitzMatrixA(int[][] A) {
+        int column = A.length;
+        int row = A[0].length;
         boolean flag = true;
         if ((column <= 1) || (row <= 1)) {
             return flag;
@@ -26,7 +26,7 @@ public class ToeplitzMatrixTest {
 
         for (int i = 0; i < row - 1; i++) {
             for (int j = 0; j < column - 1; j++) {
-                if (nums[i][j] != nums[i + 1][j + 1]) {
+                if (A[i][j] != A[i + 1][j + 1]) {
                     flag = false;
                     break;
                 }

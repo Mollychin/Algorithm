@@ -1,11 +1,14 @@
 package array;
 
+/**
+ * @author LycheeMao 2018-10-27
+ */
 public class ReshapeMatrixTest {
     public static void main(String[] args) {
-
+        int[][] matrixAfterReshaped = reshapeTheMatrixA(new int[][]{{1, 2}, {3, 4}, {5, 6}, {7, 8}}, 4, 2);
     }
 
-    private int[][] reshapeTheMatrixA(int[][] A, int rowAfterReshaped, int columnAfterReshaped) {
+    private static int[][] reshapeTheMatrixA(int[][] A, int rowAfterReshaped, int columnAfterReshaped) {
         int row = A.length;
         int column = A[0].length;
         if (rowAfterReshaped * columnAfterReshaped != row * column) {
