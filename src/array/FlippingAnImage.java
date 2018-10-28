@@ -9,7 +9,7 @@ public class FlippingAnImage {
         int[][] ints = flipAndInvertImageA(new int[][]{{1, 1, 0}, {0, 0, 1}, {1, 0, 1}, {0, 1, 1}});
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-                System.out.print(ints[i][j]+"  ");
+                System.out.print(ints[i][j] + "  ");
             }
         }
 
@@ -25,16 +25,16 @@ public class FlippingAnImage {
      * inverting [0, 1, 1] results in [1, 0, 0].
      */
     private static int[][] flipAndInvertImageA(int[][] inputArray) {
-        int result[][] = new int[inputArray.length][];
+        int[][] result = new int[inputArray.length][];
         for (int i = 0; i < inputArray.length; i++) {
-            int reversed[] = reverse(inputArray[i]);
-            int inversed[] = inverse(reversed);
-            result[i] = inversed;
+            int[] reversed = reverse(inputArray[i]);
+            int[] inverted = invert(reversed);
+            result[i] = inverted;
         }
         return result;
     }
 
-    private static int[] reverse(int inputArray[]) {
+    private static int[] reverse(int[] inputArray) {
         for (int i = 0; i < (inputArray.length) / 2; i++) {
             int temp = inputArray[i];
             inputArray[i] = inputArray[inputArray.length - i - 1];
@@ -43,7 +43,7 @@ public class FlippingAnImage {
         return inputArray;
     }
 
-    private static int[] inverse(int inputArray[]) {
+    private static int[] invert(int[] inputArray) {
         for (int i = 0; i < inputArray.length; i++) {
             inputArray[i] = inputArray[i] ^ 1;
         }
