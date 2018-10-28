@@ -6,7 +6,7 @@ package array;
  */
 public class FlippingAnImage {
     public static void main(String[] args) {
-        int[][] ints = flipAndInvertImage(new int[][]{{1, 1, 0}, {0, 0, 1}, {1, 0, 1}, {0, 1, 1}});
+        int[][] ints = flipAndInvertImageA(new int[][]{{1, 1, 0}, {0, 0, 1}, {1, 0, 1}, {0, 1, 1}});
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
                 System.out.print(ints[i][j]+"  ");
@@ -24,7 +24,7 @@ public class FlippingAnImage {
      * To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0. For example,
      * inverting [0, 1, 1] results in [1, 0, 0].
      */
-    private static int[][] flipAndInvertImage(int[][] inputArray) {
+    private static int[][] flipAndInvertImageA(int[][] inputArray) {
         int result[][] = new int[inputArray.length][];
         for (int i = 0; i < inputArray.length; i++) {
             int reversed[] = reverse(inputArray[i]);
