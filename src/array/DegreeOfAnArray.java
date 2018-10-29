@@ -24,6 +24,9 @@ public class DegreeOfAnArray {
         HashMap<Integer, int[]> map = new HashMap<>();
         for (int i = 0;i<inputArray.length;i++){
             if (!map.containsKey(inputArray[i])){
+                // 1st num:degree of the certain num
+                // 2ed num:the first index of the certain num
+                // 3rd num:the last index of the certain num
                 map.put(inputArray[i],new int[]{1,i,i});
             }else{
                 int [] temp = map.get(inputArray[i]);
