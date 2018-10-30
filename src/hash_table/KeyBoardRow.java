@@ -1,6 +1,5 @@
 package hash_table;
 
-import sun.plugin.net.protocol.jar.CachedJarURLConnection;
 
 import java.util.ArrayList;
 import java.util.HashSet;
