@@ -2,15 +2,16 @@ package hash_table;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @author lycheeMao on 2018-10-30
  */
 public class KeyBoardRow {
     public static void main(String[] args) {
-        String[] wordsA = findWordsA(new String[]{"qsde", "asdhj", "xcfv"});
+        String[] wordsA = findWordsB(new String[]{"qsde", "asdhj", "xcfv"});
         for (String word : wordsA) {
-            System.out.print(word+"  ");
+            System.out.print(word + "  ");
         }
     }
 
@@ -27,4 +28,10 @@ public class KeyBoardRow {
         }
         return result.toArray(new String[0]);
     }
+
+    private static String[] findWordsB(String[] words) {
+        return Stream.of(words).filter(s -> s.toLowerCase().matches("[qwertyuiop]*[asdfghjkl]*[zxcvbnm]*")).
+                toArray(String[]::new);
+    }
+
 }
