@@ -93,7 +93,9 @@ public class KeyBoardRow {
             }
             countNum ++;
         }
+        // list 转成 String类型的数组。
         String[] resultArray = result.toArray(new String[0]);
+
         return resultArray;
 
     }
