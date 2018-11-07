@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  */
 public class KeyBoardRow {
     public static void main(String[] args) {
-        String[] wordsA = findWordsC(new String[]{"qsde", "asdhj", "xcfv"});
+        String[] wordsA = findWordsA(new String[]{"qsde", "asdhj", "xcfv"});
         for (String word : wordsA) {
             System.out.print(word + "  ");
         }
@@ -70,28 +70,28 @@ public class KeyBoardRow {
 
         int countNum = 0;
         List<String> result = new ArrayList<>();
-        for (String word:words){
+        for (String word : words) {
             word = word.toLowerCase();
             boolean canBeTyped = true;
             char c = word.charAt(0);
             Set<Character> row;
-            if (rowA.contains(c)){
+            if (rowA.contains(c)) {
                 row = rowA;
-            }else if (rowB.contains(c)){
+            } else if (rowB.contains(c)) {
                 row = rowB;
-            }else{
-                row =rowC;
+            } else {
+                row = rowC;
             }
-            for (int i = 0;i<word.length();i++){
-                if (!row.contains(word.charAt(i))){
+            for (int i = 0; i < word.length(); i++) {
+                if (!row.contains(word.charAt(i))) {
                     canBeTyped = false;
                     break;
                 }
             }
-            if (canBeTyped){
+            if (canBeTyped) {
                 result.add(words[countNum]);
             }
-            countNum ++;
+            countNum++;
         }
         // list 转成 String类型的数组。
         String[] resultArray = result.toArray(new String[0]);
